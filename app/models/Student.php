@@ -9,6 +9,11 @@ class Student extends BaseModel
         $this->setQuery($sql);
         return $this->loadAllRows();
     }
+    public function deleteStudent($id){
+        $sql = "DELETE FROM sinh_vien WHERE id = ?";
+        $this->setQuery($sql);
+        return $this->execute([$id]);
+    }
 }
 
 ?>

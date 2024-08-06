@@ -9,7 +9,7 @@ const DBHOST = "127.0.0.1";
 const BASE_URL = "http://localhost/ams2/base/";
 
 
-function redirect($key = "",$msg = "",$url ="") {
+function flash($key = "",$msg = "",$url ="") {
     $_SESSION[$key] = $msg;
     switch ($key) {
         case "errors":

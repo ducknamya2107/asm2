@@ -18,7 +18,7 @@
                 <td>{{ $st->phone_number }}</td>
                 <th>
                     <a href="">Sửa</a>
-                    <a href="">Xóa</a>
+                    <a href="{{ route('destroy/'.$st->id) }}">Xóa</a>
                 </th>
             </tr>
         @endforeach

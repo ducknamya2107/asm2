@@ -21,6 +21,12 @@ class StudentController extends BaseController
 //        include 'app/views/category/index.php';
         return $this->render('student.index', compact('data'));
     }
+    public function destroy($id){
+        $check = $this->student->deleteStudent($id);
+        if($check){
+            flash('success', 'Xóa thành công','index');
+        }
+    }
     
 //     public function index()
 //     {
